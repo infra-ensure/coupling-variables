@@ -1,0 +1,5 @@
+# Regions used for the Infra-Ensure coupling.
+# Same scope as the common definitions of energy-scenarios-at-workflow,
+# which list only Austria (see OQ-2 in pypsa_validation_processing).
+- common:
+    - Austria

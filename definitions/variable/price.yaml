@@ -1,0 +1,38 @@
+# Price variables for the Infra-Ensure coupling.
+# STATUS: draft. To be specified in the definition session.
+# Source: pypsa_validation_processing specs/variables/Price__Final_Energy__Industry__*.md
+#   (reviewed 2026-11-11), GitHub issues #76, #99-#104, #172, #173.
+# Unit: EUR_2020/MWh (OQ-34, owner decision 2026-11-11).
+
+- Price|Final Energy|Industry|Electricity:
+    description: Price of electricity used as final energy in industry, per unit (#99).
+    unit: EUR_2020/MWh
+- Price|Final Energy|Industry|Gases:
+    description: >-
+      Price of the gas mix used as final energy in industry, per unit. Includes
+      gas from fossil and non-fossil sources (#100).
+    unit: EUR_2020/MWh
+- Price|Final Energy|Industry|Hydrogen:
+    description: Price of hydrogen used as final energy in industry, per unit (#101).
+    unit: EUR_2020/MWh
+- Price|Final Energy|Industry|Solids|Biomass:
+    description: Price of solid biomass used as final energy in industry, per unit (#102).
+    unit: EUR_2020/MWh
+- Price|Final Energy|Industry|Solids|Coal:
+    description: Price of coal used as final energy in industry, per unit (#103).
+    unit: EUR_2020/MWh
+- Price|Final Energy|Industry|Liquids|Oil:
+    description: >-
+      Price of oil (naphtha) used as final energy in industry, per unit. Includes
+      oil from fossil and non-fossil sources (#104).
+    unit: EUR_2020/MWh
+# Not yet specified in pypsa_validation_processing (OQ-35); descriptions to be agreed.
+- Price|Final Energy|Industry|Liquids|Methanol:
+    description: Price of methanol used as final energy in industry, per unit (#172).
+    unit: EUR_2020/MWh
+- Price|Final Energy|Industry|Liquids:
+    description: Price of liquids used as final energy in industry, per unit (aggregate, #173).
+    unit: EUR_2020/MWh
+- Price|Final Energy|Industry|Solids:
+    description: Price of solids used as final energy in industry, per unit (aggregate, #173).
+    unit: EUR_2020/MWh
