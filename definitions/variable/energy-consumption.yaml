@@ -1,0 +1,29 @@
+# Final energy variables of the agriculture sector for the Infra-Ensure coupling.
+# STATUS: draft from the definition session 2026-11-11.
+# Electricity and Oil: copied from the common definitions of
+#   energy-scenarios-at-workflow (definitions/variable/energy-consumption.yaml, commit 7298df9),
+#   template Final Energy [by Sector]|{Sector}|{Final Energy Carrier} expanded by nomenclature.
+# Gas Grid Mix and Heat: new carriers, not in the common definitions.
+#   Heat is the heat delivered to the agriculture sector (as pypsa-de Final Energy|Agriculture|Heat).
+#   The energy input to the heat supply of the agriculture sector (e.g. gas, oil and electricity of
+#   decentral boilers and heat pumps) is therefore not part of Electricity, Gas Grid Mix or Oil.
+# Unit: TJ, as in the common definitions.
+# Accounting rules are set in the variable specs of pypsa_validation_processing.
+
+- Final Energy [by Sector]|Agriculture|Electricity:
+    description: Energy consumption of electricity by the agriculture sector including forestry excluding
+      transmission/distribution losses
+    unit: TJ
+- Final Energy [by Sector]|Agriculture|Gas Grid Mix:
+    description: Energy consumption of methane from the gas grid, whatever its origin (fossil natural
+      gas, biomethane and synthetic methane), by the agriculture sector including forestry excluding
+      transmission/distribution losses
+    unit: TJ
+- Final Energy [by Sector]|Agriculture|Oil:
+    description: Energy consumption of oil by the agriculture sector including forestry excluding
+      transmission/distribution losses
+    unit: TJ
+- Final Energy [by Sector]|Agriculture|Heat:
+    description: Energy consumption of heat by the agriculture sector including forestry excluding
+      transmission/distribution losses
+    unit: TJ
