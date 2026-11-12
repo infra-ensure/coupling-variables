@@ -1,6 +1,6 @@
 # Secondary energy variables (electricity generation mix, district heat supply) for the
 # Infra-Ensure coupling.
-# STATUS: draft from the definition session 2026-11-11.
+# STATUS: draft from the definition session 2026-11-11. reviewed 2026-11-12
 #
 # Secondary Energy|Electricity|...
 #   Coal, Oil, Solar, Wind, Hydro, Biomass, Waste: copied from the common definitions of
@@ -8,7 +8,7 @@
 #   template Secondary Energy|Electricity|{Electricity Generation by Source} expanded by nomenclature.
 #   Biomass is solid biomass only (common definition); biogas is in Other.
 #   Gas Grid Mix and Other: new sources, not in the common definitions.
-#   Electricity of CHPs is counted under the fuel of the CHP (as pypsa-de get_secondary_energy).
+#   Electricity of CHPs is counted under the fuel of the CHP.
 #   Unit: TWh, as in the common definitions.
 #
 # Secondary Energy|District Heating|...
@@ -37,7 +37,7 @@
     description: Total net generation of electricity from solar photovoltaics (PV)
     unit: TWh
 - Secondary Energy|Electricity|Wind:
-    description: Total net generation of electricity from wind
+    description: Total net generation of electricity from wind including onshore and offshore technologies
     unit: TWh
 - Secondary Energy|Electricity|Hydro:
     description: Total net generation of electricity from hydropower
@@ -49,9 +49,7 @@
     description: Total net generation of electricity from burning of waste
     unit: TWh
 - Secondary Energy|Electricity|Other:
-    description: Total net generation of electricity from all sources not reported under coal, oil,
-      gas grid mix, solar, wind, hydro, solid biomass or waste (e.g. biogas, hydrogen, methanol),
-      excluding electricity storage
+    description: Total net generation of electricity from all sources, excluding electricity storage
     unit: TWh
 - Secondary Energy|District Heating|Electricity:
     description: Heat supplied to district heating grids by heat pumps and resistive heaters
