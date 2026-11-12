@@ -1,0 +1,33 @@
+# Final energy variables of the residential and commercial sector for the Infra-Ensure coupling.
+# STATUS: draft from the definition session 2026-11-11.
+# Electricity, Oil and District Heat: copied from the common definitions of
+#   energy-scenarios-at-workflow (definitions/variable/energy-consumption.yaml, commit 7298df9),
+#   template Final Energy [by Sector]|{Sector}|{Final Energy Carrier} expanded by nomenclature.
+# Gas Grid Mix and Solid Biomass: new carriers, not in the common definitions.
+#   Solid Biomass replaces the common carrier Biomass (biomass including biomethane);
+#   biomethane is part of Gas Grid Mix.
+# Unit: TJ, as in the common definitions.
+# Accounting rules (e.g. split of decentral heat input between sectors) are set in the
+# variable specs of pypsa_validation_processing.
+
+- Final Energy [by Sector]|Residential and Commercial|Electricity:
+    description: Energy consumption of electricity by the commercial (services) and residential sector
+      (buildings and households) excluding transmission/distribution losses
+    unit: TJ
+- Final Energy [by Sector]|Residential and Commercial|Gas Grid Mix:
+    description: Energy consumption of methane from the gas grid, whatever its origin (fossil natural
+      gas, biomethane and synthetic methane), by the commercial (services) and residential sector
+      (buildings and households) excluding transmission/distribution losses
+    unit: TJ
+- Final Energy [by Sector]|Residential and Commercial|Oil:
+    description: Energy consumption of oil by the commercial (services) and residential sector (buildings
+      and households) excluding transmission/distribution losses
+    unit: TJ
+- Final Energy [by Sector]|Residential and Commercial|District Heat:
+    description: Energy consumption of heat delivered from district heating grids by the commercial (services)
+      and residential sector (buildings and households) excluding transmission/distribution losses
+    unit: TJ
+- Final Energy [by Sector]|Residential and Commercial|Solid Biomass:
+    description: Energy consumption of solid biomass by the commercial (services) and residential sector
+      (buildings and households) excluding transmission/distribution losses
+    unit: TJ
