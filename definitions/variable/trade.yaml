@@ -1,0 +1,64 @@
+# Net import variables for the Infra-Ensure coupling.
+# STATUS: draft from the definition session 2026-11-12.
+# Electricity, Oil, Coal: copied from the common definitions of energy-scenarios-at-workflow
+#   (definitions/variable/trade.yaml, commit 7298df9), template Net Imports|{Final Energy Carrier}
+#   expanded by nomenclature.
+#   Coal includes lignite (owner, 2026-11-12), as solid fossil fuels in the Eurostat energy balance.
+# Hydrogen: in the common definitions, but with the description "hydrogen produced from renewable
+#   electricity". Here it counts all hydrogen, whatever its production route, including imports
+#   from outside the modelled region (owner, 2026-11-12), so the description differs.
+# Gas Grid Mix: new carrier, not in the common definitions (as in energy-consumption.yaml and
+#   secondary-energy.yaml of this repository). It replaces Natural Gas (fossil methane only).
+# Sign: positive = net import, negative = net export.
+# Unit: TJ, as in the common definitions.
+# Accounting rules are set in the variable specs of pypsa_validation_processing
+#   (Net_Imports__Electricity.md, Net_Imports__Oil.md; Hydrogen, Gas Grid Mix and Coal to be specified).
+
+- Net Imports|Electricity:
+    description: Net imports of electricity
+    unit: TJ
+- Net Imports|Hydrogen:
+    description: Net imports of hydrogen, whatever its production route
+    unit: TJ
+- Net Imports|Oil:
+    description: Net imports of oil, whatever its origin
+    unit: TJ
+- Net Imports|Gas Grid Mix:
+    description: Net imports of methane through the gas grid, whatever its origin (fossil natural gas,
+      biomethane and synthetic methane)
+    unit: TJ
+- Net Imports|Coal:
+    description: Net imports of coal including lignite
+    unit: TJ
+
+# Trade|{carrier}|Value: yearly value of the net imports above (owner, 2026-11-12).
+#   Value = import spending - export revenue. Every flow is valued at the marginal price of its
+#   sending bus (for imports the exporting bus, e.g. the EU bus or the neighbour's bus; for
+#   exports the Austrian bus). CO2 price not included (bus marginal prices only).
+#   Sign: positive = net import (as Net Imports|...), deviating from the IAMC Trade convention
+#   (positive = net export).
+#   Unit: million EUR_2020/yr (currency year as in OQ-34, scale as in investment.yaml).
+#   No GitHub issue reference (owner, 2026-11-12).
+
+- Trade|Electricity|Value:
+    description: Value of the net imports of electricity, import spending minus export revenue, each
+      flow valued at the marginal price of its sending bus. Positive = net import
+    unit: million EUR_2020/yr
+- Trade|Hydrogen|Value:
+    description: Value of the net imports of hydrogen, whatever its production route, import spending
+      minus export revenue, each flow valued at the marginal price of its sending bus. Positive = net
+      import
+    unit: million EUR_2020/yr
+- Trade|Oil|Value:
+    description: Value of the net imports of oil, whatever its origin, import spending minus export revenue,
+      each flow valued at the marginal price of its sending bus, without CO2 price. Positive = net import
+    unit: million EUR_2020/yr
+- Trade|Gas Grid Mix|Value:
+    description: Value of the net imports of methane through the gas grid, whatever its origin (fossil
+      natural gas, biomethane and synthetic methane), import spending minus export revenue, each flow
+      valued at the marginal price of its sending bus, without CO2 price. Positive = net import
+    unit: million EUR_2020/yr
+- Trade|Coal|Value:
+    description: Value of the net imports of coal including lignite, import spending minus export revenue,
+      each flow valued at the marginal price of its sending bus, without CO2 price. Positive = net import
+    unit: million EUR_2020/yr
