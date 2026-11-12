@@ -16,5 +16,6 @@ def test_definitions_are_valid() -> None:
 def test_every_variable_has_unit_and_description() -> None:
     dsd = nomenclature.DataStructureDefinition(DEFINITIONS)
     for name, code in dsd.variable.items():
-        assert code.unit, f"{name} has no unit"
+        # "" is allowed: nomenclature's convention for dimensionless units.
+        assert code.unit is not None, f"{name} has no unit"
         assert code.description, f"{name} has no description"
