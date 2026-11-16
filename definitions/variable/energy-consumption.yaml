@@ -13,7 +13,7 @@
 #   biomethane is part of Gas Grid Mix.
 #
 # Agriculture
-#   Electricity and Oil: copied from the common definitions (same source and
+#   Electricity, Oil, Biomass and Other: copied from the common definitions (same source and
 #   template as above).
 #   Gas Grid Mix and Heat: new carriers, not in the common definitions.
 #   Heat is the heat delivered to the agriculture sector (as pypsa-de Final Energy|Agriculture|Heat).
@@ -57,4 +57,12 @@
 - Final Energy [by Sector]|Agriculture|Heat:
     description: Energy consumption of heat by the agriculture sector including forestry excluding
       transmission/distribution losses
+    unit: TJ
+- Final Energy [by Sector]|Agriculture|Biomass:
+    description: Energy consumption of biomass including biomethane by the agriculture sector including
+      forestry excluding transmission/distribution losses
+    unit: TJ
+- Final Energy [by Sector]|Agriculture|Other:
+    description: Energy consumption of other sources or carriers by the agriculture sector including
+      forestry excluding transmission/distribution losses
     unit: TJ
