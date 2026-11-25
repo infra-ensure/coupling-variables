@@ -3,7 +3,7 @@
 # STATUS: draft from the definition session 2026-11-11. reviewed 2026-11-12
 #
 # Secondary Energy|Electricity|...
-#   Coal, Oil, Solar, Wind, Hydro, Biomass, Waste: copied from the common definitions of
+#   Solar, Wind, Hydro: copied from the common definitions of
 #   energy-scenarios-at-workflow (definitions/variable/electricity-generation.yaml, commit 7298df9),
 #   template Secondary Energy|Electricity|{Electricity Generation by Source} expanded by nomenclature.
 #   Biomass is solid biomass only (common definition); biogas is in Other.
