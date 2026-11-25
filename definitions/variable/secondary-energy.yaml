@@ -8,6 +8,9 @@
 #   template Secondary Energy|Electricity|{Electricity Generation by Source} expanded by nomenclature.
 #   Biomass is solid biomass only (common definition); biogas is in Other.
 #   Gas Grid Mix and Other: new sources, not in the common definitions.
+#   Electricity w/o CHP|{Coal, Oil, Gas Grid Mix, Biomass, Waste, Other}: own branch for generation
+#   excluding CHPs, so that the names Electricity|{Coal, Oil, Biomass, Waste} keep the meaning of the
+#   common definitions (which include CHPs). Solar, Wind, Hydro have no CHPs and stay under Electricity.
 #   Electricity of CHPs is counted as extra variable, consistent with the CHP counting of
 #   District Heating. Electricity of CHPs is NOT counted under the fuel of the CHP.
 #   Electricity|CHP|{Coal, Oil, Gas Grid Mix, Waste, Biomass, Other}: new variables, electricity of
@@ -17,8 +20,9 @@
 # Secondary Energy|District Heating|...
 #   New variables, not in the common definitions. Heat output supplied to district heating
 #   (urban central heat) grids per technology group, as pypsa-de Secondary Energy|Heat|...
-#   District Heating|{Electricity, Oil, Gas Grid Mix, Biomass, Other}: heat-only technologies;
-#   they MUST NOT contain heat of CHPs.
+#   District Heating|Electricity: heat pumps and resistive heaters (no CHPs).
+#   District Heating w/o CHP|{Oil, Gas Grid Mix, Biomass, Other}: heat-only technologies, own branch
+#   to make the exclusion visible in the name; they MUST NOT contain heat of CHPs.
 #   District Heating|CHP|{Coal, Oil, Gas Grid Mix, Waste, Biomass, Other}: heat of CHPs, split by
 #   the fuel of the CHP, same sources as the electricity mix (owner, 2026-11-11).
 #   Biomass is solid biomass only, as for electricity; heat of biogas and hydrogen CHPs is in CHP|Other.
