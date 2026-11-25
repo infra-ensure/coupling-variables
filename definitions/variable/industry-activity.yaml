@@ -1,0 +1,67 @@
+# Industry activity level variables for the Infra-Ensure coupling.
+# STATUS: draft from the definition session 2026-11-12.
+# Sectors: industry subsectors of JRC-IDEES as used in pypsa-at
+#   (scripts/build_industrial_production_per_country.py). Names kept close to JRC-IDEES (owner,
+#   2026-11-12); subsectors are grouped as follows:
+#   Iron and Steel                  Electric arc, Integrated steelworks, DRI + Electric arc
+#   Non-Ferrous Metals              Aluminium - primary production, Aluminium - secondary production,
+#                                   Other non-ferrous metals
+#   Non-Metallic Mineral Products   Cement, Ceramics & other NMM, Glass production
+#   Pulp and Paper                  Pulp production, Paper production
+#   All other sectors map to one JRC-IDEES subsector of the same name.
+#   Not included: Basic chemicals (Ammonia, HVC, Chlorine, Methanol) and Alumina production.
+# Unit: "" (dimensionless, nomenclature convention), index of physical production, 2020 = 1 (owner, 2026-11-12).
+# Computation rules are set in the variable specs of pypsa_validation_processing (to be specified).
+
+- Industry Activity Level|Iron and Steel:
+    description: Activity level of iron and steel production (electric arc, integrated steelworks and
+      DRI + electric arc), as physical production relative to 2020 (2020 = 1)
+    unit: ""
+- Industry Activity Level|Non-Ferrous Metals:
+    description: Activity level of the production of non-ferrous metals (primary and secondary aluminium
+      and other non-ferrous metals), as physical production relative to 2020 (2020 = 1)
+    unit: ""
+- Industry Activity Level|Non-Metallic Mineral Products:
+    description: Activity level of the production of non-metallic mineral products (cement, ceramics &
+      other non-metallic minerals and glass), as physical production relative to 2020 (2020 = 1)
+    unit: ""
+- Industry Activity Level|Pulp and Paper:
+    description: Activity level of pulp and paper production, as physical production relative to 2020
+      (2020 = 1)
+    unit: ""
+- Industry Activity Level|Printing and Media Reproduction:
+    description: Activity level of printing and media reproduction, as physical production relative to
+      2020 (2020 = 1)
+    unit: ""
+- Industry Activity Level|Other Chemicals:
+    description: Activity level of the production of other chemicals (chemicals without basic chemicals
+      and pharmaceutical products), as physical production relative to 2020 (2020 = 1)
+    unit: ""
+- Industry Activity Level|Pharmaceutical Products:
+    description: Activity level of the production of pharmaceutical products, as physical production
+      relative to 2020 (2020 = 1)
+    unit: ""
+- Industry Activity Level|Food, Beverages and Tobacco:
+    description: Activity level of the food, beverages and tobacco industry, as physical production
+      relative to 2020 (2020 = 1)
+    unit: ""
+- Industry Activity Level|Textiles and Leather:
+    description: Activity level of the textiles and leather industry, as physical production relative
+      to 2020 (2020 = 1)
+    unit: ""
+- Industry Activity Level|Wood and Wood Products:
+    description: Activity level of the wood and wood products industry, as physical production relative
+      to 2020 (2020 = 1)
+    unit: ""
+- Industry Activity Level|Machinery Equipment:
+    description: Activity level of the machinery equipment industry, as physical production relative
+      to 2020 (2020 = 1)
+    unit: ""
+- Industry Activity Level|Transport Equipment:
+    description: Activity level of the transport equipment industry, as physical production relative
+      to 2020 (2020 = 1)
+    unit: ""
+- Industry Activity Level|Other Industrial Sectors:
+    description: Activity level of other industrial sectors, as physical production relative to 2020
+      (2020 = 1)
+    unit: ""
