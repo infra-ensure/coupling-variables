@@ -26,15 +26,15 @@
 #
 # No totals. Accounting rules are set in the variable specs of pypsa_validation_processing.
 
-- Secondary Energy|Electricity|Coal:
+- Secondary Energy|Electricity w/o CHP|Coal:
     description: Total net generation of electricity from coal, excluding combined heat and power
       plants (CHPs)
     unit: TWh
-- Secondary Energy|Electricity|Oil:
+- Secondary Energy|Electricity w/o CHP|Oil:
     description: Total net generation of electricity from oil, excluding combined heat and power
       plants (CHPs)
     unit: TWh
-- Secondary Energy|Electricity|Gas Grid Mix:
+- Secondary Energy|Electricity w/o CHP|Gas Grid Mix:
     description: Total net generation of electricity from methane from the gas grid, whatever its
       origin (fossil natural gas, biomethane and synthetic methane), excluding combined heat and power
       plants (CHPs)
@@ -48,15 +48,15 @@
 - Secondary Energy|Electricity|Hydro:
     description: Total net generation of electricity from hydropower
     unit: TWh
-- Secondary Energy|Electricity|Biomass:
+- Secondary Energy|Electricity w/o CHP|Biomass:
     description: Total net generation of electricity from solid biomass, excluding combined heat and
       power plants (CHPs)
     unit: TWh
-- Secondary Energy|Electricity|Waste:
+- Secondary Energy|Electricity w/o CHP|Waste:
     description: Total net generation of electricity from burning of waste, excluding combined heat
       and power plants (CHPs)
     unit: TWh
-- Secondary Energy|Electricity|Other:
+- Secondary Energy|Electricity w/o CHP|Other:
     description: Total net generation of electricity from sources not reported under coal, oil, gas grid
       mix, solar, wind, hydro, solid biomass or waste (e.g. biogas), excluding electricity storage
     unit: TWh
