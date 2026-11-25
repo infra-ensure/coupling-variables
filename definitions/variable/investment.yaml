@@ -1,177 +1,162 @@
 # Investment variables for the Infra-Ensure coupling.
 # STATUS: draft from the definition session 2026-11-11.
-# Investment|...        overnight investment of the capacity built in the period / years in the period
+# Investment|...        total overnight investment of the capacity built in the period (not per year)
 # Annualized CAPEX|...  annuity (without FOM) of all capacity installed in the year
-# Unit: million EUR_2020/yr (currency year 2020 as in OQ-34).
+# Unit: Investment million EUR_2020, Annualized CAPEX million EUR_2020/yr (currency year 2020 as in OQ-34).
 # No group totals. CHPs only under CHP|<fuel>; carbon capture (CC) variants count with their base
 # technology. Storage includes its charger and discharger links.
 # Carrier mapping and computation rules are set in the variable specs of pypsa_validation_processing.
 
 - Investment|Electricity|Solar:
-    description: Overnight investment in solar PV (utility, tracking and rooftop), for the capacity built
-      in the period, divided by the years of the period.
-    unit: million EUR_2020/yr
+    description: Total overnight investment in solar PV (utility, tracking and rooftop), for the capacity built
+      in the period.
+    unit: million EUR_2020
 - Investment|Electricity|Wind:
-    description: Overnight investment in wind power (onshore and offshore), for the capacity built in
-      the period, divided by the years of the period.
-    unit: million EUR_2020/yr
+    description: Total overnight investment in wind power (onshore and offshore), for the capacity built in
+      the period.
+    unit: million EUR_2020
 - Investment|Electricity|Biomass:
-    description: Overnight investment in biomass power plants without CHPs (none in the AT network), for
-      the capacity built in the period, divided by the years of the period.
-    unit: million EUR_2020/yr
+    description: Total overnight investment in biomass power plants without CHPs (none in the AT network), for
+      the capacity built in the period.
+    unit: million EUR_2020
 - Investment|Electricity|Hydro:
-    description: Overnight investment in run-of-river and reservoir hydro power, for the capacity built
-      in the period, divided by the years of the period.
-    unit: million EUR_2020/yr
+    description: Total overnight investment in run-of-river and reservoir hydro power, for the capacity built
+      in the period.
+    unit: million EUR_2020
 - Investment|Electricity|Gas:
-    description: Overnight investment in gas power plants without CHPs, for the capacity built in the
-      period, divided by the years of the period.
-    unit: million EUR_2020/yr
+    description: Total overnight investment in gas power plants without CHPs, for the capacity built in the
+      period.
+    unit: million EUR_2020
 - Investment|Electricity|Hydrogen:
-    description: Overnight investment in hydrogen power plants and fuel cells without CHPs, for the capacity
-      built in the period, divided by the years of the period.
-    unit: million EUR_2020/yr
+    description: Total overnight investment in hydrogen power plants and fuel cells without CHPs, for the capacity
+      built in the period.
+    unit: million EUR_2020
 - Investment|Electricity|Methanol:
-    description: Overnight investment in methanol power plants, for the capacity built in the period,
-      divided by the years of the period.
-    unit: million EUR_2020/yr
+    description: Total overnight investment in methanol power plants, for the capacity built in the period.
+    unit: million EUR_2020
 - Investment|CHP|Gas:
-    description: Overnight investment in gas CHPs, with and without carbon capture, for the capacity built
-      in the period, divided by the years of the period.
-    unit: million EUR_2020/yr
+    description: Total overnight investment in gas CHPs, with and without carbon capture, for the capacity built
+      in the period.
+    unit: million EUR_2020
 - Investment|CHP|Biomass:
-    description: Overnight investment in biomass CHPs, with and without carbon capture, for the capacity
-      built in the period, divided by the years of the period.
-    unit: million EUR_2020/yr
+    description: Total overnight investment in biomass CHPs, with and without carbon capture, for the capacity
+      built in the period.
+    unit: million EUR_2020
 - Investment|CHP|Hydrogen:
-    description: Overnight investment in hydrogen CHPs, for the capacity built in the period, divided
-      by the years of the period.
-    unit: million EUR_2020/yr
+    description: Total overnight investment in hydrogen CHPs, for the capacity built in the period.
+    unit: million EUR_2020
 - Investment|CHP|Waste:
-    description: Overnight investment in waste CHPs, with and without carbon capture, for the capacity
-      built in the period, divided by the years of the period.
-    unit: million EUR_2020/yr
+    description: Total overnight investment in waste CHPs, with and without carbon capture, for the capacity
+      built in the period.
+    unit: million EUR_2020
 - Investment|Gases|Hydrogen|Electrolysis:
-    description: Overnight investment in electrolysers, for the capacity built in the period, divided
-      by the years of the period.
-    unit: million EUR_2020/yr
+    description: Total overnight investment in electrolysers, for the capacity built in the period.
+    unit: million EUR_2020
 - Investment|Gases|Hydrogen|SMR:
-    description: Overnight investment in steam methane reforming, with and without carbon capture, for
-      the capacity built in the period, divided by the years of the period.
-    unit: million EUR_2020/yr
+    description: Total overnight investment in steam methane reforming, with and without carbon capture, for
+      the capacity built in the period.
+    unit: million EUR_2020
 - Investment|Gases|Hydrogen|Other:
-    description: Overnight investment in other hydrogen production (methane pyrolysis, biomass gasification,
-      ammonia cracking, methanol reforming), for the capacity built in the period, divided by the years
-      of the period.
-    unit: million EUR_2020/yr
+    description: Total overnight investment in other hydrogen production (methane pyrolysis, biomass gasification,
+      ammonia cracking, methanol reforming), for the capacity built in the period.
+    unit: million EUR_2020
 - Investment|Gases|Methane|Biogas Upgrading:
-    description: Overnight investment in biogas upgrading, with and without carbon capture, for the capacity
-      built in the period, divided by the years of the period.
-    unit: million EUR_2020/yr
+    description: Total overnight investment in biogas upgrading, with and without carbon capture, for the capacity
+      built in the period.
+    unit: million EUR_2020
 - Investment|Gases|Methane|BioSNG:
-    description: Overnight investment in synthetic natural gas from solid biomass, with and without carbon
-      capture, for the capacity built in the period, divided by the years of the period.
-    unit: million EUR_2020/yr
+    description: Total overnight investment in synthetic natural gas from solid biomass, with and without carbon
+      capture, for the capacity built in the period.
+    unit: million EUR_2020
 - Investment|Gases|Methane|Sabatier:
-    description: Overnight investment in methanation (Sabatier), for the capacity built in the period,
-      divided by the years of the period.
-    unit: million EUR_2020/yr
+    description: Total overnight investment in methanation (Sabatier), for the capacity built in the period.
+    unit: million EUR_2020
 - Investment|Liquids|Oil:
-    description: Overnight investment in oil refining (not extendable in the AT network), for the capacity
-      built in the period, divided by the years of the period.
-    unit: million EUR_2020/yr
+    description: Total overnight investment in oil refining (not extendable in the AT network), for the capacity
+      built in the period.
+    unit: million EUR_2020
 - Investment|Liquids|Fischer-Tropsch:
-    description: Overnight investment in Fischer-Tropsch synthesis, for the capacity built in the period,
-      divided by the years of the period.
-    unit: million EUR_2020/yr
+    description: Total overnight investment in Fischer-Tropsch synthesis, for the capacity built in the period.
+    unit: million EUR_2020
 - Investment|Liquids|Biofuels:
-    description: Overnight investment in liquid biofuels, with and without carbon capture, for the capacity
-      built in the period, divided by the years of the period.
-    unit: million EUR_2020/yr
+    description: Total overnight investment in liquid biofuels, with and without carbon capture, for the capacity
+      built in the period.
+    unit: million EUR_2020
 - Investment|Liquids|Methanol:
-    description: Overnight investment in methanol production and methanol-to-kerosene, for the capacity
-      built in the period, divided by the years of the period.
-    unit: million EUR_2020/yr
+    description: Total overnight investment in methanol production and methanol-to-kerosene, for the capacity
+      built in the period.
+    unit: million EUR_2020
 - Investment|Liquids|Ammonia:
-    description: Overnight investment in ammonia synthesis (Haber-Bosch), for the capacity built in the
-      period, divided by the years of the period.
-    unit: million EUR_2020/yr
+    description: Total overnight investment in ammonia synthesis (Haber-Bosch), for the capacity built in the
+      period.
+    unit: million EUR_2020
 - Investment|Grid|Electricity|Transmission:
-    description: Overnight investment in electricity transmission lines (AC lines and DC links), for the
-      capacity built in the period, divided by the years of the period.
-    unit: million EUR_2020/yr
+    description: Total overnight investment in electricity transmission lines (AC lines and DC links), for the
+      capacity built in the period.
+    unit: million EUR_2020
 - Investment|Grid|Electricity|Distribution:
-    description: Overnight investment in the electricity distribution grid, for the capacity built in
-      the period, divided by the years of the period.
-    unit: million EUR_2020/yr
+    description: Total overnight investment in the electricity distribution grid, for the capacity built in
+      the period.
+    unit: million EUR_2020
 - Investment|Grid|Gas:
-    description: Overnight investment in gas pipelines, for the capacity built in the period, divided
-      by the years of the period.
-    unit: million EUR_2020/yr
+    description: Total overnight investment in gas pipelines, for the capacity built in the period.
+    unit: million EUR_2020
 - Investment|Grid|H2:
-    description: Overnight investment in hydrogen pipelines, new and retrofitted, for the capacity built
-      in the period, divided by the years of the period.
-    unit: million EUR_2020/yr
+    description: Total overnight investment in hydrogen pipelines, new and retrofitted, for the capacity built
+      in the period.
+    unit: million EUR_2020
 - Investment|Grid|Carbon:
-    description: Overnight investment in CO2 pipelines, for the capacity built in the period, divided
-      by the years of the period.
-    unit: million EUR_2020/yr
+    description: Total overnight investment in CO2 pipelines, for the capacity built in the period.
+    unit: million EUR_2020
 - Investment|Storage|Batteries:
-    description: Overnight investment in utility and home batteries, including chargers and dischargers,
-      for the capacity built in the period, divided by the years of the period.
-    unit: million EUR_2020/yr
+    description: Total overnight investment in utility and home batteries, including chargers and dischargers,
+      for the capacity built in the period.
+    unit: million EUR_2020
 - Investment|Storage|H2:
-    description: Overnight investment in hydrogen storage, for the capacity built in the period, divided
-      by the years of the period.
-    unit: million EUR_2020/yr
+    description: Total overnight investment in hydrogen storage, for the capacity built in the period.
+    unit: million EUR_2020
 - Investment|Storage|PHS:
-    description: Overnight investment in pumped hydro storage, including chargers and dischargers, for
-      the capacity built in the period, divided by the years of the period.
-    unit: million EUR_2020/yr
+    description: Total overnight investment in pumped hydro storage, including chargers and dischargers, for
+      the capacity built in the period.
+    unit: million EUR_2020
 - Investment|Storage|Thermal:
-    description: Overnight investment in thermal storage (water tanks and pits), including chargers and
-      dischargers, for the capacity built in the period, divided by the years of the period.
-    unit: million EUR_2020/yr
+    description: Total overnight investment in thermal storage (water tanks and pits), including chargers and
+      dischargers, for the capacity built in the period.
+    unit: million EUR_2020
 - Investment|Storage|Other:
-    description: Overnight investment in other storage (ammonia, CO2), for the capacity built in the period,
-      divided by the years of the period.
-    unit: million EUR_2020/yr
+    description: Total overnight investment in other storage (ammonia, CO2), for the capacity built in the period.
+    unit: million EUR_2020
 - Investment|Heating|District Heat|Heat Pumps:
-    description: Overnight investment in district heating heat pumps, for the capacity built in the period,
-      divided by the years of the period.
-    unit: million EUR_2020/yr
+    description: Total overnight investment in district heating heat pumps, for the capacity built in the period.
+    unit: million EUR_2020
 - Investment|Heating|District Heat|Resistive Heaters:
-    description: Overnight investment in district heating resistive heaters, for the capacity built in
-      the period, divided by the years of the period.
-    unit: million EUR_2020/yr
+    description: Total overnight investment in district heating resistive heaters, for the capacity built in
+      the period.
+    unit: million EUR_2020
 - Investment|Heating|District Heat|Boilers:
-    description: Overnight investment in district heating boilers, for the capacity built in the period,
-      divided by the years of the period.
-    unit: million EUR_2020/yr
+    description: Total overnight investment in district heating boilers, for the capacity built in the period.
+    unit: million EUR_2020
 - Investment|Heating|District Heat|Solar Thermal:
-    description: Overnight investment in district heating solar thermal collectors, for the capacity built
-      in the period, divided by the years of the period.
-    unit: million EUR_2020/yr
+    description: Total overnight investment in district heating solar thermal collectors, for the capacity built
+      in the period.
+    unit: million EUR_2020
 - Investment|Heating|Decentral|Heat Pumps:
-    description: Overnight investment in decentral heat pumps, for the capacity built in the period, divided
-      by the years of the period.
-    unit: million EUR_2020/yr
+    description: Total overnight investment in decentral heat pumps, for the capacity built in the period.
+    unit: million EUR_2020
 - Investment|Heating|Decentral|Resistive Heaters:
-    description: Overnight investment in decentral resistive heaters, for the capacity built in the period,
-      divided by the years of the period.
-    unit: million EUR_2020/yr
+    description: Total overnight investment in decentral resistive heaters, for the capacity built in the period.
+    unit: million EUR_2020
 - Investment|Heating|Decentral|Boilers:
-    description: Overnight investment in decentral gas, biomass and oil boilers, for the capacity built
-      in the period, divided by the years of the period.
-    unit: million EUR_2020/yr
+    description: Total overnight investment in decentral gas, biomass and oil boilers, for the capacity built
+      in the period.
+    unit: million EUR_2020
 - Investment|Heating|Decentral|Solar Thermal:
-    description: Overnight investment in decentral solar thermal collectors, for the capacity built in
-      the period, divided by the years of the period.
-    unit: million EUR_2020/yr
+    description: Total overnight investment in decentral solar thermal collectors, for the capacity built in
+      the period.
+    unit: million EUR_2020
 - Investment|Carbon Capture|DAC:
-    description: Overnight investment in direct air capture, for the capacity built in the period, divided
-      by the years of the period.
-    unit: million EUR_2020/yr
+    description: Total overnight investment in direct air capture, for the capacity built in the period.
+    unit: million EUR_2020
 - Annualized CAPEX|Electricity|Solar:
     description: Annualised capital expenditure (annuity without fixed O&M) for solar PV (utility, tracking
       and rooftop), for all capacity installed in the year.
