@@ -3,11 +3,14 @@
 # STATUS: draft from the definition session 2026-11-11. reviewed 2026-11-12
 #
 # Secondary Energy|Electricity|...
-#   Coal, Oil, Solar, Wind, Hydro, Biomass, Waste: copied from the common definitions of
+#   Solar, Wind, Hydro: copied from the common definitions of
 #   energy-scenarios-at-workflow (definitions/variable/electricity-generation.yaml, commit 7298df9),
 #   template Secondary Energy|Electricity|{Electricity Generation by Source} expanded by nomenclature.
 #   Biomass is solid biomass only (common definition); biogas is in Other.
 #   Gas Grid Mix and Other: new sources, not in the common definitions.
+#   Electricity w/o CHP|{Coal, Oil, Gas Grid Mix, Biomass, Waste, Other}: own branch for generation
+#   excluding CHPs, so that the names Electricity|{Coal, Oil, Biomass, Waste} keep the meaning of the
+#   common definitions (which include CHPs). Solar, Wind, Hydro have no CHPs and stay under Electricity.
 #   Electricity of CHPs is counted as extra variable, consistent with the CHP counting of
 #   District Heating. Electricity of CHPs is NOT counted under the fuel of the CHP.
 #   Electricity|CHP|{Coal, Oil, Gas Grid Mix, Waste, Biomass, Other}: new variables, electricity of
@@ -17,8 +20,9 @@
 # Secondary Energy|District Heating|...
 #   New variables, not in the common definitions. Heat output supplied to district heating
 #   (urban central heat) grids per technology group, as pypsa-de Secondary Energy|Heat|...
-#   District Heating|{Electricity, Oil, Gas Grid Mix, Biomass, Other}: heat-only technologies;
-#   they MUST NOT contain heat of CHPs.
+#   District Heating|Electricity: heat pumps and resistive heaters (no CHPs).
+#   District Heating w/o CHP|{Oil, Gas Grid Mix, Biomass, Other}: heat-only technologies, own branch
+#   to make the exclusion visible in the name; they MUST NOT contain heat of CHPs.
 #   District Heating|CHP|{Coal, Oil, Gas Grid Mix, Waste, Biomass, Other}: heat of CHPs, split by
 #   the fuel of the CHP, same sources as the electricity mix (owner, 2026-11-11).
 #   Biomass is solid biomass only, as for electricity; heat of biogas and hydrogen CHPs is in CHP|Other.
@@ -26,15 +30,15 @@
 #
 # No totals. Accounting rules are set in the variable specs of pypsa_validation_processing.
 
-- Secondary Energy|Electricity|Coal:
+- Secondary Energy|Electricity w/o CHP|Coal:
     description: Total net generation of electricity from coal, excluding combined heat and power
       plants (CHPs)
     unit: TWh
-- Secondary Energy|Electricity|Oil:
+- Secondary Energy|Electricity w/o CHP|Oil:
     description: Total net generation of electricity from oil, excluding combined heat and power
       plants (CHPs)
     unit: TWh
-- Secondary Energy|Electricity|Gas Grid Mix:
+- Secondary Energy|Electricity w/o CHP|Gas Grid Mix:
     description: Total net generation of electricity from methane from the gas grid, whatever its
       origin (fossil natural gas, biomethane and synthetic methane), excluding combined heat and power
       plants (CHPs)
@@ -48,17 +52,17 @@
 - Secondary Energy|Electricity|Hydro:
     description: Total net generation of electricity from hydropower
     unit: TWh
-- Secondary Energy|Electricity|Biomass:
+- Secondary Energy|Electricity w/o CHP|Biomass:
     description: Total net generation of electricity from solid biomass, excluding combined heat and
       power plants (CHPs)
     unit: TWh
-- Secondary Energy|Electricity|Waste:
+- Secondary Energy|Electricity w/o CHP|Waste:
     description: Total net generation of electricity from burning of waste, excluding combined heat
       and power plants (CHPs)
     unit: TWh
-- Secondary Energy|Electricity|Other:
+- Secondary Energy|Electricity w/o CHP|Other:
     description: Total net generation of electricity from sources not reported under coal, oil, gas grid
-      mix, solar, wind, hydro, solid biomass or waste (e.g. biogas), excluding electricity storage
+      mix, solar, wind, hydro, solid biomass or waste (e.g. biogas), excluding electricity storage, excluding combined heat and power plants (CHPs)
     unit: TWh
 - Secondary Energy|Electricity|CHP|Coal:
     description: Total net generation of electricity by coal-fired combined heat and power plants (CHPs)
@@ -85,20 +89,20 @@
 - Secondary Energy|District Heating|Electricity:
     description: Heat supplied to district heating grids by heat pumps and resistive heaters
     unit: TWh
-- Secondary Energy|District Heating|Oil:
+- Secondary Energy|District Heating w/o CHP|Oil:
     description: Heat supplied to district heating grids by oil boilers, excluding combined heat and
       power plants (CHPs)
     unit: TWh
-- Secondary Energy|District Heating|Gas Grid Mix:
+- Secondary Energy|District Heating w/o CHP|Gas Grid Mix:
     description: Heat supplied to district heating grids by boilers fired with methane from the gas grid,
       whatever its origin (fossil natural gas, biomethane and synthetic methane), excluding combined
       heat and power plants (CHPs)
     unit: TWh
-- Secondary Energy|District Heating|Biomass:
+- Secondary Energy|District Heating w/o CHP|Biomass:
     description: Heat supplied to district heating grids by solid biomass boilers, excluding combined
       heat and power plants (CHPs)
     unit: TWh
-- Secondary Energy|District Heating|Other:
+- Secondary Energy|District Heating w/o CHP|Other:
     description: Heat supplied to district heating grids by all heat-only sources not reported under
       electricity, oil, gas grid mix or solid biomass (e.g. solar thermal, waste heat of fuel synthesis
       and electrolysis), excluding combined heat and power plants (CHPs) and thermal storage
