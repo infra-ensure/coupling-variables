@@ -85,20 +85,20 @@
 - Secondary Energy|District Heating|Electricity:
     description: Heat supplied to district heating grids by heat pumps and resistive heaters
     unit: TWh
-- Secondary Energy|District Heating|Oil:
+- Secondary Energy|District Heating w/o CHP|Oil:
     description: Heat supplied to district heating grids by oil boilers, excluding combined heat and
       power plants (CHPs)
     unit: TWh
-- Secondary Energy|District Heating|Gas Grid Mix:
+- Secondary Energy|District Heating w/o CHP|Gas Grid Mix:
     description: Heat supplied to district heating grids by boilers fired with methane from the gas grid,
       whatever its origin (fossil natural gas, biomethane and synthetic methane), excluding combined
       heat and power plants (CHPs)
     unit: TWh
-- Secondary Energy|District Heating|Biomass:
+- Secondary Energy|District Heating w/o CHP|Biomass:
     description: Heat supplied to district heating grids by solid biomass boilers, excluding combined
       heat and power plants (CHPs)
     unit: TWh
-- Secondary Energy|District Heating|Other:
+- Secondary Energy|District Heating w/o CHP|Other:
     description: Heat supplied to district heating grids by all heat-only sources not reported under
       electricity, oil, gas grid mix or solid biomass (e.g. solar thermal, waste heat of fuel synthesis
       and electrolysis), excluding combined heat and power plants (CHPs) and thermal storage
