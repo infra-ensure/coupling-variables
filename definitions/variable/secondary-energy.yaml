@@ -62,7 +62,7 @@
     unit: TWh
 - Secondary Energy|Electricity w/o CHP|Other:
     description: Total net generation of electricity from sources not reported under coal, oil, gas grid
-      mix, solar, wind, hydro, solid biomass or waste (e.g. biogas), excluding electricity storage
+      mix, solar, wind, hydro, solid biomass or waste (e.g. biogas), excluding electricity storage, excluding combined heat and power plants (CHPs)
     unit: TWh
 - Secondary Energy|Electricity|CHP|Coal:
     description: Total net generation of electricity by coal-fired combined heat and power plants (CHPs)
